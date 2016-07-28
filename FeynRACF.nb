@@ -1,0 +1,611 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21933,        602]
+NotebookOptionsPosition[     20891,        568]
+NotebookOutlinePosition[     21281,        585]
+CellTagsIndexPosition[     21238,        582]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"FeynArts", " ", "File"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"$UserName", "\[Equal]", "\"\<Oleg\>\""}], ",", "True", ",", 
+    RowBox[{
+     RowBox[{"$FeynRulesPath", "=", 
+      RowBox[{
+      "SetDirectory", "[", 
+       "\"\</home/oleg/Dropbox/XlaM/Projects1/b-l_M/FeynArtsAll/FeynArts-3.9\>\
+\"", "]"}]}], ";"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6500683938813725`*^9, 3.6500684190050626`*^9}, {
+  3.650068478572627*^9, 3.6500685488615522`*^9}, {3.650217960817097*^9, 
+  3.650217967675986*^9}, {3.668889452395171*^9, 3.668889504298898*^9}, {
+  3.6761359503230643`*^9, 3.676136006112976*^9}, {3.6763793549400654`*^9, 
+  3.676379362142378*^9}, {3.676379547097523*^9, 3.6763795479498024`*^9}, {
+  3.6763795897031717`*^9, 3.676379590251327*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "FeynArts`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"$FeynRulesPath", "<>", "\"\<\\\\Models\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6501569862641764`*^9, 3.650157011871428*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Z", "\[Rule]", 
+    RowBox[{"\[Nu]\[Nu]", " ", "Tree"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"tp1", "=", 
+     RowBox[{"CreateTopologies", "[", 
+      RowBox[{"0", ",", 
+       RowBox[{"1", "\[Rule]", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"tp1", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "2"}], "}"}]}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"FD1", "=", 
+    RowBox[{"InsertFields", "[", 
+     RowBox[{"tp1", ",", 
+      RowBox[{
+       RowBox[{"V", "[", "2", "]"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"F", "[", "1", "]"}], ",", 
+         RowBox[{"-", 
+          RowBox[{"F", "[", "1", "]"}]}]}], "}"}]}], ",", 
+      RowBox[{"GenericModel", "\[Rule]", "\"\<Lorentz\>\""}], ",", 
+      RowBox[{"Model", "\[Rule]", "\"\<SM\>\""}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"FD1", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "2"}], "}"}]}], ",", 
+      RowBox[{"PaintLevel", "\[Rule]", 
+       RowBox[{"{", "Classes", "}"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Amp1", "=", 
+    RowBox[{"CreateFeynAmp", "[", 
+     RowBox[{"FD1", ",", 
+      RowBox[{"AmplitudeLevel", "\[Rule]", 
+       RowBox[{"{", "Classes", "}"}]}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6501574314852123`*^9, 3.650157482468686*^9}, {
+   3.6501576085086913`*^9, 3.6501576610913687`*^9}, {3.650157717363514*^9, 
+   3.650157778235244*^9}, {3.6501578795781126`*^9, 3.6501578876581388`*^9}, 
+   3.6501579766499395`*^9, {3.6501580266892934`*^9, 3.6501580268808174`*^9}, {
+   3.6501582036482644`*^9, 3.6501582068956766`*^9}, {3.650158321079176*^9, 
+   3.6501583707029777`*^9}, {3.650222160736458*^9, 3.650222161777528*^9}, {
+   3.650222204591299*^9, 3.650222207530935*^9}, {3.650222240273673*^9, 
+   3.65022226113881*^9}, 3.6760688930948153`*^9, {3.6761368277227173`*^9, 
+   3.6761368567808175`*^9}, {3.6761375687463226`*^9, 
+   3.6761375988500767`*^9}, {3.6761382318838644`*^9, 
+   3.6761382339464197`*^9}, {3.676138424907523*^9, 3.6761384618141017`*^9}, 
+   3.6761391939017687`*^9, {3.676139226997527*^9, 3.6761392294819765`*^9}, {
+   3.676145581877944*^9, 3.6761456154700165`*^9}, {3.676145730714937*^9, 
+   3.676145733248207*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Z", "\[Rule]", 
+    RowBox[{"\[Nu]\[Nu]", " ", "1", "O"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"tp2", "=", 
+     RowBox[{"CreateTopologies", "[", 
+      RowBox[{"1", ",", 
+       RowBox[{"1", "\[Rule]", "2"}], ",", 
+       RowBox[{"ExcludeTopologies", "\[Rule]", "Internal"}]}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"tp2", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FD2", "=", 
+     RowBox[{"InsertFields", "[", 
+      RowBox[{"tp2", ",", 
+       RowBox[{
+        RowBox[{"V", "[", "2", "]"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"F", "[", "1", "]"}], ",", 
+          RowBox[{"-", 
+           RowBox[{"F", "[", "1", "]"}]}]}], "}"}]}], ",", 
+       RowBox[{"GenericModel", "\[Rule]", "\"\<Lorentz\>\""}], ",", 
+       RowBox[{"Model", "\[Rule]", "\"\<SM\>\""}]}], "]"}]}], ";"}], 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"V", "[", "2", "]"}], "=", "Z"}], ";", 
+     RowBox[{
+      RowBox[{"F", "[", "1", "]"}], "=", "\[Nu]i"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"FD2", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"PaintLevel", "\[Rule]", 
+       RowBox[{"{", "Classes", "}"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Amp2", "=", 
+     RowBox[{"CreateFeynAmp", "[", 
+      RowBox[{"FD2", ",", 
+       RowBox[{"AmplitudeLevel", "\[Rule]", 
+        RowBox[{"{", "Classes", "}"}]}]}], "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.650220343898671*^9, 3.650220477316183*^9}, {
+   3.650221091969014*^9, 3.650221121110353*^9}, {3.650221159385346*^9, 
+   3.650221213029067*^9}, {3.650221243069321*^9, 3.650221332859032*^9}, {
+   3.6761385697688384`*^9, 3.676138597671093*^9}, {3.6761387706149764`*^9, 
+   3.6761388054703894`*^9}, 3.6761388413523636`*^9, {3.6761389382729473`*^9, 
+   3.6761389437476897`*^9}, {3.6761390001950874`*^9, 3.6761390179337273`*^9}, 
+   3.676139054291848*^9, {3.676139085948978*^9, 3.6761391004135113`*^9}, {
+   3.6761392408795977`*^9, 3.676139296900818*^9}, {3.6761456216498523`*^9, 
+   3.6761456309980783`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"H", "\[Rule]", 
+    RowBox[{"l", 
+     OverscriptBox["l", "_"], " ", "Tree"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"tp3", "=", 
+     RowBox[{"CreateTopologies", "[", 
+      RowBox[{"0", ",", 
+       RowBox[{"1", "\[Rule]", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"tp3", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FD3", "=", 
+     RowBox[{"InsertFields", "[", 
+      RowBox[{"tp3", ",", 
+       RowBox[{
+        RowBox[{"S", "[", "1", "]"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"F", "[", "2", "]"}], ",", 
+          RowBox[{"-", 
+           RowBox[{"F", "[", "2", "]"}]}]}], "}"}]}], ",", 
+       RowBox[{"GenericModel", "\[Rule]", "\"\<Lorentz\>\""}], ",", 
+       RowBox[{"Model", "\[Rule]", "\"\<SM\>\""}], ",", 
+       RowBox[{"InsertionLevel", "\[Rule]", 
+        RowBox[{"{", "Particles", "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"FD3", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"PaintLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Amp3", "=", 
+    RowBox[{"CreateFeynAmp", "[", 
+     RowBox[{"FD3", ",", 
+      RowBox[{"AmplitudeLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6761393859893208`*^9, 3.6761393868174496`*^9}, {
+   3.6761394239156733`*^9, 3.6761394271189327`*^9}, {3.6761396735545387`*^9, 
+   3.676139690943182*^9}, {3.676139730979038*^9, 3.67613973314499*^9}, {
+   3.6761402687676506`*^9, 3.676140275515829*^9}, {3.6761422044192877`*^9, 
+   3.6761422340087185`*^9}, 3.6761422812753353`*^9, {3.6761423320498543`*^9, 
+   3.676142336283552*^9}, {3.6761444239750347`*^9, 3.6761444286946*^9}, {
+   3.6761456343575935`*^9, 3.6761456713851757`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"H", "\[Rule]", 
+    RowBox[{"l", 
+     OverscriptBox["l", "_"], " ", "1", "O"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"tp4", "=", 
+     RowBox[{"CreateTopologies", "[", 
+      RowBox[{"1", ",", 
+       RowBox[{"1", "\[Rule]", "2"}], ",", 
+       RowBox[{"ExcludeTopologies", "\[Rule]", "Internal"}]}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"tp4", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FD4", "=", 
+     RowBox[{"InsertFields", "[", 
+      RowBox[{"tp4", ",", 
+       RowBox[{
+        RowBox[{"S", "[", "1", "]"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"F", "[", "2", "]"}], ",", 
+          RowBox[{"-", 
+           RowBox[{"F", "[", "2", "]"}]}]}], "}"}]}], ",", 
+       RowBox[{"GenericModel", "\[Rule]", "\"\<Lorentz\>\""}], ",", 
+       RowBox[{"Model", "\[Rule]", "\"\<SM\>\""}], ",", 
+       RowBox[{"InsertionLevel", "\[Rule]", 
+        RowBox[{"{", "Particles", "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"FD4", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"PaintLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Amp4", "=", 
+    RowBox[{"CreateFeynAmp", "[", 
+     RowBox[{"FD4", ",", 
+      RowBox[{"AmplitudeLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6761402911034803`*^9, 3.6761403240904307`*^9}, 
+   3.6761427164102373`*^9, {3.6761428208960886`*^9, 3.6761428315740232`*^9}, {
+   3.676145690189248*^9, 3.6761456958517046`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    SuperscriptBox["\[Mu]", "-"], "\[Rule]", 
+    RowBox[{
+     SuperscriptBox["e", "-"], 
+     SubscriptBox[
+      OverscriptBox["\[Nu]", "_"], "e"], 
+     SubscriptBox["\[Nu]", "\[Mu]"], " ", "Tree"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"tp5", "=", 
+     RowBox[{"CreateTopologies", "[", 
+      RowBox[{"0", ",", 
+       RowBox[{"1", "\[Rule]", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"tp5", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FD5", "=", 
+     RowBox[{"InsertFields", "[", 
+      RowBox[{"tp5", ",", 
+       RowBox[{
+        RowBox[{"F", "[", 
+         RowBox[{"2", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"F", "[", 
+           RowBox[{"2", ",", 
+            RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+          RowBox[{"-", 
+           RowBox[{"F", "[", 
+            RowBox[{"1", ",", 
+             RowBox[{"{", "1", "}"}]}], "]"}]}], ",", 
+          RowBox[{"F", "[", 
+           RowBox[{"1", ",", 
+            RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}]}], ",", 
+       RowBox[{"GenericModel", "\[Rule]", "\"\<Lorentz\>\""}], ",", 
+       RowBox[{"Model", "\[Rule]", "\"\<SM\>\""}], ",", 
+       RowBox[{"InsertionLevel", "\[Rule]", 
+        RowBox[{"{", "Particles", "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"FD5", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"PaintLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Amp5", "=", 
+    RowBox[{"CreateFeynAmp", "[", 
+     RowBox[{"FD5", ",", 
+      RowBox[{"AmplitudeLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6761403404276447`*^9, 3.6761403746827755`*^9}, {
+   3.676140410605874*^9, 3.6761404139286137`*^9}, {3.6761404457004337`*^9, 
+   3.676140484813528*^9}, {3.6761406637440434`*^9, 3.6761406802713118`*^9}, {
+   3.676141131160562*^9, 3.6761411664881606`*^9}, {3.676141423267048*^9, 
+   3.676141431894457*^9}, {3.6761416710070543`*^9, 3.676141681504487*^9}, {
+   3.676142870169655*^9, 3.6761428799297333`*^9}, {3.676144047302374*^9, 
+   3.676144047707102*^9}, {3.6761440891759663`*^9, 3.676144167416314*^9}, {
+   3.6761443117436886`*^9, 3.67614432588212*^9}, 3.676144391565394*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    SuperscriptBox["\[Mu]", "-"], "\[Rule]", 
+    RowBox[{
+     SuperscriptBox["e", "-"], 
+     SubscriptBox[
+      OverscriptBox["\[Nu]", "_"], "e"], 
+     SubscriptBox["\[Nu]", "\[Mu]"], " ", "1", "O"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"tp6", "=", 
+     RowBox[{"CreateTopologies", "[", 
+      RowBox[{"1", ",", 
+       RowBox[{"1", "\[Rule]", "3"}], ",", 
+       RowBox[{"ExcludeTopologies", "\[Rule]", "Internal"}]}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"tp6", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FD6", "=", 
+     RowBox[{"InsertFields", "[", 
+      RowBox[{"tp6", ",", 
+       RowBox[{
+        RowBox[{"F", "[", 
+         RowBox[{"2", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"F", "[", 
+           RowBox[{"2", ",", 
+            RowBox[{"{", "1", "}"}]}], "]"}], ",", 
+          RowBox[{"-", 
+           RowBox[{"F", "[", 
+            RowBox[{"1", ",", 
+             RowBox[{"{", "1", "}"}]}], "]"}]}], ",", 
+          RowBox[{"F", "[", 
+           RowBox[{"1", ",", 
+            RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}]}], ",", 
+       RowBox[{"GenericModel", "\[Rule]", "\"\<Lorentz\>\""}], ",", 
+       RowBox[{"Model", "\[Rule]", "\"\<SM\>\""}], ",", 
+       RowBox[{"InsertionLevel", "\[Rule]", 
+        RowBox[{"{", "Particles", "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{"FD6", ",", 
+      RowBox[{"ColumnsXRows", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}]}], ",", 
+      RowBox[{"PaintLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Amp6", "=", 
+    RowBox[{"CreateFeynAmp", "[", 
+     RowBox[{"FD6", ",", 
+      RowBox[{"AmplitudeLevel", "\[Rule]", 
+       RowBox[{"{", "Particles", "}"}]}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.676143992504714*^9, 3.676144012509738*^9}, {
+   3.676144178192741*^9, 3.6761441845430226`*^9}, 3.676144343344499*^9, 
+   3.6761446563838296`*^9, 3.676144899301426*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Diagram", " ", "Reshaping"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Shape", "[", 
+    RowBox[{"tp6", "[", 
+     RowBox[{"[", "9", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Paint", "[", 
+     RowBox[{
+      RowBox[{"tp6", "[", 
+       RowBox[{"[", "9", "]"}], "]"}], ",", 
+      RowBox[{"FieldNumbers", "\[Rule]", "True"}]}], "]"}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.676145182056723*^9, 3.676145204846827*^9}, 
+   3.6761452793648634`*^9, {3.6761453244033933`*^9, 3.676145324932248*^9}, {
+   3.6761453613305607`*^9, 3.676145362236749*^9}, {3.676145418001042*^9, 
+   3.6761454290494194`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Import", "[", "\"\<http://www.feyncalc.org/install.m\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.676304748064175*^9, 3.6763047888263507`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Automatic", " ", "Installation", " ", "of", " ", "FeynCalc"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+  "Import", "[", 
+   "\"\<https://raw.githubusercontent.com/FeynCalc/feyncalc/master/install.m\>\
+\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6763420431327915`*^9, 3.6763420676531696`*^9}, {
+  3.676342103409933*^9, 3.6763421121951756`*^9}, {3.676342538244455*^9, 
+  3.676342539436979*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Load", " ", "FeynCalc", " ", "with", " ", "FeynArts", " ", "together", 
+    " ", 
+    RowBox[{"(", 
+     RowBox[{"FeynArts", " ", "patxhed", " ", "version"}], ")"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"$LoadFeynArts", "=", "True"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"<<", "FeynCalc`"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.6764343458002906`*^9, 3.6764343458062887`*^9}, {
+  3.676434914149708*^9, 3.676434915784792*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Directory", ",", " ", 
+    RowBox[{"where", " ", "Mathematica", " ", "packages", " ", "are", " ", 
+     RowBox[{"located", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{"$UserBaseDirectory", ",", "\"\<Applications\>\""}], "}"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.676342193813652*^9, 3.6763422826072807`*^9}, {
+  3.676344814889433*^9, 3.6763448415936136`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Opens", " ", "directory"}], ",", " ", 
+    RowBox[{"where", " ", "Mathematica", " ", "packages", " ", "are", " ", 
+     RowBox[{"located", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"SystemOpen", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"$UserBaseDirectory", ",", "\"\<Applications\>\""}], "}"}], 
+    "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.6763799551000376`*^9, {3.676511180838184*^9, 3.6765111878475847`*^9}},
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"FeynCalc", " ", "sample", " ", "commands"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FourVector", "[", 
+    RowBox[{"p", ",", "mu"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"MetricTensor", "[", 
+    RowBox[{"mu", ",", "nu"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"ScalarProduct", "[", 
+    RowBox[{"p", ",", "q"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.676375042004636*^9, 3.676375047067321*^9}, 
+   3.676375166695078*^9, {3.676375204207004*^9, 3.6763752131780157`*^9}, {
+   3.6763753201280065`*^9, 3.676375373771982*^9}, {3.67651119475198*^9, 
+   3.6765112123539867`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"feynAmpNext", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ReplaceAll", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"FeynAmp", "[", 
+         RowBox[{"_", ",", "_", ",", "amp_", ",", "___"}], "]"}], 
+        "\[RuleDelayed]", "amp"}]}], "]"}], "&"}], ",", 
+    RowBox[{"Apply", "[", 
+     RowBox[{"List", ",", 
+      RowBox[{"FCPrepareFAAmp", "[", "Amp5", "]"}]}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6764350808970995`*^9, 3.676435080904096*^9}, {
+  3.6764351172265873`*^9, 3.676435125079646*^9}}],
+
+Cell[BoxData[
+ RowBox[{"DiracSimplify", "[", "feynAmpNext", "]"}]], "Input",
+ CellChangeTimes->{{3.676377614193903*^9, 3.676377621945554*^9}, {
+  3.6763782403227105`*^9, 3.6763782420243177`*^9}, {3.676435195666996*^9, 
+  3.676435196636218*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Contract", "[", "feynAmpNext", "]"}]], "Input",
+ CellChangeTimes->{{3.6763779434353247`*^9, 3.6763779474823847`*^9}, {
+  3.6764352073529477`*^9, 3.6764352127939014`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Calc", "[", "feynAmpNext", "]"}]], "Input",
+ CellChangeTimes->{{3.6763957659931984`*^9, 3.676395769476533*^9}, {
+  3.6764352222289715`*^9, 3.676435233566495*^9}}]
+},
+WindowSize->{1366, 695},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+ShowSelection->True,
+CellContext->Notebook,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 850, 18, 52, "Input"],
+Cell[1411, 40, 53, 1, 31, "Input"],
+Cell[1467, 43, 209, 5, 31, "Input"],
+Cell[1679, 50, 2530, 58, 132, "Input"],
+Cell[4212, 110, 2498, 63, 132, "Input"],
+Cell[6713, 175, 2225, 56, 132, "Input"],
+Cell[8941, 233, 1998, 55, 132, "Input"],
+Cell[10942, 290, 2751, 71, 132, "Input"],
+Cell[13696, 363, 2417, 68, 132, "Input"],
+Cell[16116, 433, 701, 18, 72, "Input"],
+Cell[16820, 453, 170, 3, 31, "Input"],
+Cell[16993, 458, 454, 11, 52, "Input"],
+Cell[17450, 471, 525, 15, 72, "Input"],
+Cell[17978, 488, 481, 11, 52, "Input"],
+Cell[18462, 501, 548, 14, 52, "Input"],
+Cell[19013, 517, 657, 15, 92, "Input"],
+Cell[19673, 534, 581, 16, 31, "Input"],
+Cell[20257, 552, 244, 4, 31, "Input"],
+Cell[20504, 558, 194, 3, 31, "Input"],
+Cell[20701, 563, 186, 3, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
